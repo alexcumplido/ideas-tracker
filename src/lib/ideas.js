@@ -1,8 +1,8 @@
 import { ID, Query } from 'appwrite';
 import { databases } from '$lib/appwrite';
 
-const IDEAS_DATABASE_ID = '65b7900a399dedf44aab';
-const IDEAS_COLLECTION_ID = 'ideas-tracker-collection-ID';
+const IDEAS_DATABASE_ID = process.env.DATABASE_ID;
+const IDEAS_COLLECTION_ID = process.env.DATABASE_ID;
 
 export async function getIdeas() {
 	return await databases.listDocuments(
